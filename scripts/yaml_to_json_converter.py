@@ -19,7 +19,7 @@ def convert_yaml_to_json(yaml_file_path, json_file_path):
         print(f"❌ Error: {e}")
 
 # Example usage
-yaml_file = 'dev-iot.yaml'      # Input YAML file name
+yaml_file = '/home/g2021wb86154/Declaration-files/google-cloud/central-india/kafka/dev-iot.yaml'      # Input YAML file name
 json_file = 'dev-iot.json'      # Output JSON file name
 
 convert_yaml_to_json(yaml_file, json_file)

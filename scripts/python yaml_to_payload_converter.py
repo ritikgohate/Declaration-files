@@ -15,10 +15,10 @@ def convert_yaml_to_payload(yaml_file_path, payload_file_path):
         with open(payload_file_path, 'w') as payload_file:
             payload_file.write(json_payload)
 
-        print(f"✅ Payload saved to '{payload_file_path}'")
+        print(f"Payload saved to '{payload_file_path}'")
 
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
 
 # Example usage
 yaml_input = 'dev-iot.yaml'               # Input YAML file
