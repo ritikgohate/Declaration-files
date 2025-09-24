@@ -1,12 +1,14 @@
 ---
-name: 'dev-iot' #name for the cluster
-cluster-id: 'kafka-dev-iot'
-role: 'kafka-zookeeper'  #kafka role type eg. kafka-kraft or kafka-zookeeper 
-project-no: ''  #GCP project number
-zone: 'none'        #if you want deploy into specific zone eg.
+name: dev-iot #name for the cluster
+cluster-id: kafka-dev-iot
+role: kafka-kraft #kafka role type eg. kafka-kraft or kafka-zookeeper 
+project-id: sapient-duality-469110-d9
+zone: asia-south1-c #if you want deploy into specific zone eg.
+region: asia-south1
+instance-template: standard-instance-template
+node-count: 0
 infra:
-  flavor: 'e2-standard-2'
-  boot-disk-size: '60GB'
-  data-disk-size: '100GB-ssd'
-  node-count: '3'
-os-image: 'Ubuntu 24.04 LTS Minimal'
+  flavor: e2-standard-2
+  boot-disk-size: 60GB
+  data-disk-size: 100GB-ssd
+os-image: Ubuntu 24.04 LTS Minimal

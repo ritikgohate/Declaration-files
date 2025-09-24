@@ -1,3 +1,4 @@
+---
 name: YAML Syntax Check and Send a request to CloudOrchestrate
 
 on:
