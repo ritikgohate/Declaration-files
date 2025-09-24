@@ -6,7 +6,7 @@ import subprocess
 import os
 
 # Function to detect new or modified YAML files using Git
-def get_changed_yaml_files(base_branch='main'):
+def get_changed_yaml_files(base_branch='payload'):
     """Detects new and modified YAML files compared to the base branch."""
     try:
         subprocess.run(['git', 'fetch'], check=True)

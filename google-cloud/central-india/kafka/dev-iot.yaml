@@ -9,6 +9,6 @@ instance-template: standard-instance-template
 node-count: 0
 infra:
   flavor: e2-standard-2
-  boot-disk-size: 60GB
+  boot-disk-size: 50GB
   data-disk-size: 100GB-ssd
 os-image: Ubuntu 24.04 LTS Minimal
