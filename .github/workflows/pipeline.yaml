@@ -4,7 +4,7 @@ name: YAML Syntax Check and Send a request to CloudOrchestrate
 on:
   push:
     branches:
-      - payload
+      - dev
       - master
     paths:
       - '**.yaml'
@@ -12,7 +12,7 @@ on:
       - 'script.py'
   pull_request:
     branches:
-      - payload
+      - dev
       - master
     paths:
       - '**.yaml'
