@@ -1,0 +1,11 @@
+name: 'dev-iot-test1'
+cluster-id: 'kafka-dev-iot-test1'
+role: 'kafka-zookeeper'
+project-no: '1234567890'
+zone: 'us-central1-a'
+infra:
+  flavor: 'e2-standard-2'
+  boot-disk-size: '60GB'
+  data-disk-size: '100GB-ssd'
+  node-count: '3'
+os-image: 'Ubuntu 24.04 LTS Minimal'

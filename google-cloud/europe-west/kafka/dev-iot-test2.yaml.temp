@@ -1,0 +1,11 @@
+name: 'dev-iot-test2'
+cluster-id: 'kafka-dev-iot-test2'
+role: 'kafka-kraft'
+project-no: '0987654321'
+zone: 'europe-west1-b'
+infra:
+  flavor: 'n2-standard-4'
+  boot-disk-size: '80GB'
+  data-disk-size: '200GB-ssd'
+  node-count: '5'
+os-image: 'Ubuntu 24.04 LTS Minimal'
