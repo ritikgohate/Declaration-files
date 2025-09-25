@@ -6,7 +6,7 @@ import subprocess
 import os
 
 # Function to detect new or modified YAML files using Git
-def get_changed_yaml_files(base_branch='master'):
+def get_changed_yaml_files(base_branch='dev'):
     """Detects new and modified YAML files compared to the base branch."""
     try:
         subprocess.run(['git', 'fetch'], check=True)
@@ -31,6 +31,17 @@ def get_changed_yaml_files(base_branch='master'):
     except subprocess.CalledProcessError as e:
         print(f"❌ Git command failed: {e}", file=sys.stderr)
         return []
+
+# rebase the dev to master
+def rebase_dev_to_master():
+    try:
+        subprocess.run(['git', 'fetch', 'origin'], check=True)
+        subprocess.run(['git', 'rebase', 'origin/master'], check=True)
+        print("✅ Rebased dev to master successfully.")
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Rebase failed: {e}", file=sys.stderr)
+        return
+
 
 # Function to convert YAML to JSON
 def convert_yaml_to_json(yaml_file_path, json_file_path):
@@ -71,6 +82,10 @@ def main():
         print("✅ No new or modified YAML files found.")
         return
 
+    if changed_yaml_files:
+        rebase_dev_to_master()
+        return
+
     for yaml_file in changed_yaml_files:
         json_file = os.path.splitext(os.path.basename(yaml_file))[0] + '.json'
         try:
@@ -85,3 +100,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+ 
