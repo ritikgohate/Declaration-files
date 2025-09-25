@@ -82,10 +82,6 @@ def main():
         print("✅ No new or modified YAML files found.")
         return
 
-    if changed_yaml_files:
-        rebase_dev_to_master()
-        return
-
     for yaml_file in changed_yaml_files:
         json_file = os.path.splitext(os.path.basename(yaml_file))[0] + '.json'
         try:
@@ -97,6 +93,10 @@ def main():
             print(f"❌ Network error - {e}", file=sys.stderr)
         except Exception as e:
             print(f"❌ Unexpected error: {e}", file=sys.stderr)
+    
+    if changed_yaml_files:
+        rebase_dev_to_master()
+        return
 
 if __name__ == "__main__":
     main()
