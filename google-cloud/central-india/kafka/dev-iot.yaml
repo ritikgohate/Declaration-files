@@ -1,8 +1,9 @@
-name: dev-iot #name for the cluster
+---
+name: dev-iot
 cluster-id: kafka-dev-iot
-role: kafka-kraft #kafka role type eg. kafka-kraft or kafka-zookeeper 
+role: kafka-kraft
 project-id: sapient-duality-469110-d9
-zone: asia-south1-c #if you want deploy into specific zone eg.
+zone: asia-south1-c
 region: asia-south1
 instance-template: standard-instance-template
 node-count: 0
