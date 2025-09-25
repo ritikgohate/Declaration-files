@@ -12,3 +12,4 @@ infra:
   boot-disk-size: 50GB
   data-disk-size: 100GB-ssd
 os-image: Ubuntu 24.04 LTS Minimal
+
