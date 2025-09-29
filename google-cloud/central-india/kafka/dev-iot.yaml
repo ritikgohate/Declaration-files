@@ -6,7 +6,7 @@ project-id: sapient-duality-469110-d9
 zone: asia-south1-c
 region: asia-south1
 instance-template: standard-instance-template
-node-count: 0
+node-count: 3
 infra:
   flavor: e2-standard-2
   boot-disk-size: 50GB
