@@ -5,7 +5,7 @@ import os
 import sys
 
 # Paths and API URL
-YAML_FILE = "/home/g2021wb86154/Declaration-files/google-cloud/central-india/kafka/dev-iot.yaml"
+YAML_FILE = "~/Declaration-files/google-cloud/central-india/kafka/dev-iot.yaml"
 JSON_FILE = os.path.splitext(os.path.basename(YAML_FILE))[0] + ".json"
 API_URL = "https://sapient-duality-469110-d9.el.r.appspot.com/data"
 
