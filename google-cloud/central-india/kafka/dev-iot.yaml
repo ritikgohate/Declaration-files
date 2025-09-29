@@ -1,6 +1,6 @@
 ---
 name: dev-iot
-cluster-id: kafka-dev-iot
+cluster-id: kafka-dev-iot-44
 role: kafka-kraft
 project-id: sapient-duality-469110-d9
 zone: asia-south1-c
